@@ -1,0 +1,28 @@
+CREATE TABLE
+    song
+    (
+        id BIGINT NOT NULL,
+        contact BOOLEAN NOT NULL,
+        artist_email VARCHAR,
+        song_name VARCHAR,
+        artist_name VARCHAR,
+        album VARCHAR,
+        purchase_date DATETIME,
+        price NUMERIC,
+        PRIMARY KEY (id)
+    );
+
+CREATE TABLE
+    hibernate_sequence
+    (
+        next_val BIGINT
+    );
+
+INSERT INTO song (id, contact, artist_email, album, song_name, artist_name, purchase_date, price)
+  VALUES (1, 1, 'jeff@bikes.com', 'Rider', 'Welcome', 'Jeff Miller', 4419619200000, '1100');
+INSERT INTO song (id, contact, artist_email, album, song_name, artist_name, purchase_date, price)
+  VALUES (2, 0, 'samantha@bikes.com', 'Answer', 'Boy', 'Samantha Davis', 4419619200000, '1999');
+INSERT INTO song (id, contact, artist_email, album, song_name, artist_name, purchase_date, price)
+  VALUES (3, 1, 'dave@bikes.com', 'Let's Go', 'How', 'Dave Warren', 4419619200000, '2100');
+
+INSERT INTO hibernate_sequence (next_val) VALUES (4);
